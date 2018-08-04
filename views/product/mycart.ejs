@@ -1,0 +1,22 @@
+<div class="container">
+	<h1>Your Cart</h1>
+	<a href="/cart/clearcart">Clear All</a>
+	<table class="table table-bordered">
+		<tr>
+			<th>S.No.</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Add To Your Cart</th>
+			
+		</tr>
+		<% data.forEach(function(x, i){ %>
+			<tr>
+				<td><%= i+1 %></td>
+				<td><%= x.name %></td>
+				<td><%= x.price %></td>
+				<td><a href="/cart/addtocart/<%= x._id %>" class="btn btn-primary">Add</a></td>
+			</tr>
+	<% }) %>
+	</table>
+	
+</div>

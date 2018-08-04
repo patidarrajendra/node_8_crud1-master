@@ -1,0 +1,25 @@
+<div class="container">
+	<h1>Welcome Admin</h1>
+	<form action="/user/edit" method="post">
+		<div class="form-group">
+			<label>Full Name</label>
+			<input name="full_name" value="<%= data.full_name %>" type="text" class="form-control">
+		</div>
+		<div class="form-group">
+			<label>Username</label>
+			<input value="<%= data.username %>" type="text" class="form-control" disabled="disabled">
+		</div>
+		<div class="form-group">
+			<label>City</label>
+			<select name="city" class="form-control">
+				<option>Select</option>
+				<option value="indore" <% if(data.city=='indore') { %> selected="selected" <% } %> >Indore</option>
+				<option value="ujjain"  <% if(data.city=='ujjain') { %> selected="selected"<% } %>>Ujjain</option>
+				<option value="bhopal"  <% if(data.city=='bhopal') { %> selected="selected" <% } %>>Bhopal</option>
+			</select>
+			<input type="hidden" name="id" value="<%= data._id %>" />
+		</div>
+		<input type="submit" value="Update" class="btn btn-primary">
+	</form>
+	
+</div>

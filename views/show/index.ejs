@@ -1,0 +1,23 @@
+<div class="container">
+	<h1>This is Show Page</h1>
+	<table class="table table-bordered">
+		<tr>
+			<th>S.No.</th>
+			<th>Full Name</th>
+			<th>Username</th>
+			<th>City</th>
+			<th>Delete</th>
+			<th>Edit</th>
+		</tr>
+		<% data.forEach(function(x, i){ %>
+			<tr>
+				<td><%= i+1 %></td>
+				<td><%= x.full_name %></td>
+				<td><%= x.username %></td>
+				<td><%= x.city %></td>
+				<td><a href="/user/delete/<%= x._id %>" class="btn btn-danger">Delete</a></td>
+				<td><a href="/user/edit/<%= x._id %>" class="btn btn-info">Edit</a></td>
+			</tr>
+	<% }) %>
+	</table>
+</div>

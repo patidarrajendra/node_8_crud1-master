@@ -1,0 +1,19 @@
+<div class="container">
+	<h1>This is Show Page</h1>
+	
+	<% proData.forEach(function(x, i){ %>
+	<div class="col-md-4">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3><%= x.name %></h3>
+			</div>
+			<div class="panel-body">
+				<%= x.price %>
+			</div>
+			<div class="panel-footer">
+				<a href="/cart/addtocart/<%= x._id %>" class="btn btn-sm btn-info" >Add To Cart</a>
+			</div>
+		</div>
+	</div>
+	<% }) %>
+</div>
